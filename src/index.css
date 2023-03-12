@@ -37,6 +37,7 @@
     border-bottom: 2px solid #228cff;
     margin-bottom: 2.1rem;
     margin-top: 1.9rem;
+    overflow: hidden;
   }
   .nav-base {
     @apply bg-techBlue flex flex-col justify-between h-full relative py-4 px-3;
@@ -90,5 +91,21 @@
   }
   .growth {
     @apply text-xl font-bold absolute w-max text-highDark -top-10 right-1/2 translate-x-1/2;
+  }
+  .box-1 {
+    @apply bg-highGlow flex grow py-5 justify-evenly items-end;
+    height: 24rem;
+    width: 23rem;
+  }
+  .box-2 {
+    @apply ring-4 ring-inset ring-highGlow flex grow py-5 justify-evenly items-end relative;
+    height: 24rem;
+    width: 23rem;
+  }
+  .splash-img {
+    @apply w-5/6;
+  }
+  .socials {
+    @apply font-normal text-3xl;
   }
 }

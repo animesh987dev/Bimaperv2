@@ -1,11 +1,11 @@
 const Home = () => {
   return (
     <div className="glass">
-      <div className="flex gap-40 h-3/5 p-10">
+      <div className="flex gap-40 p-10">
         <div className="flex w-1/2 grow">
           <div className="flex flex-col gap-5 part-box grow">
             <h1>Present</h1>
-            <div className="bg-highGlow flex grow w-3/5 py-5 justify-evenly items-end">
+            <div className="box-1">
               <div className="bar mr-4 relative">
                 <span className="growth">126.8k Cr</span>
                 <span className="year">2022</span>
@@ -18,7 +18,7 @@ const Home = () => {
                 </span>
               </div>
             </div>
-            <p>
+            <p className="text-highGlow">
               For B2B firms, marketing budgets as a percent of firm revenue fell
               within the 6-8% range <br />
               For B2C firms, marketing budgets as a percent of firm revenue were
@@ -31,8 +31,27 @@ const Home = () => {
           </div>
         </div>
         <div className="flex w-1/2 grow">
-          <div className="part-box">
+          <div className="flex flex-col gap-5 part-box grow">
             <h1>Prediction</h1>
+            <div className="box-2">
+              <p className="font-light text-8xl">172k Cr</p>
+              <span className="text-xl flex justify-center items-center p-10 bg-techBlue text-highGlow font-bold top-4 right-4 absolute">
+                18%
+              </span>
+              <span className="text-xl absolute font-bold top-4 left-4">
+                2028
+              </span>
+            </div>
+            <p className="text-highGlow">
+              For B2B firms, marketing budgets as a percent of firm revenue fell
+              within the 6-8% range <br />
+              For B2C firms, marketing budgets as a percent of firm revenue were
+              around 8-14% <br />
+              Marketing budgets as a percent of overall firm budgets have been
+              fairly consistent for B2B firms the past few years, in the 9-11%
+              range, but avrage much higher for B2C companies, upto as much as
+              20%
+            </p>
           </div>
         </div>
       </div>
