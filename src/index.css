@@ -31,26 +31,32 @@
   .glass {
     @apply grow;
     background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background-blend-mode: multiply;
     border-top: 2px solid #228cff;
     border-left: 2px solid #228cff;
     border-bottom: 2px solid #228cff;
-    margin-bottom: 35px;
-    margin-top: 35px;
+    margin-bottom: 2.1rem;
+    margin-top: 1.9rem;
   }
   .nav-base {
     @apply bg-techBlue flex flex-col justify-between h-full relative py-4 px-3;
-    transition: all ease-in-out 0.5s;
+    width: 104px;
+    transition: all ease-in-out 0.3s;
   }
   .nav-wrap {
     @apply flex flex-col justify-center gap-6 items-start;
   }
   .ico {
-    @apply h-20 w-20;
+    max-width: 5rem;
+    max-height: 5rem;
+    transition: all ease-in-out 0.3s;
+  }
+  .exp-div .ico {
+    max-width: 0;
+    max-height: 0;
   }
   .nav-txt {
-    @apply font-normal text-highGlow py-5 px-5 cursor-pointer;
+    @apply w-max text-highGlow py-5 px-5 cursor-pointer font-bold;
   }
   .nav-box {
     @apply flex justify-center items-center;
@@ -61,6 +67,28 @@
   }
   .flag {
     @apply absolute top-0 right-0;
-    height: 25px;
+    height: 1.5rem;
+  }
+  .exp-div {
+    width: 216.7px;
+  }
+  .part-box {
+    @apply text-techBlue;
+  }
+  .part-box h1 {
+    @apply text-techBlue text-5xl;
+  }
+  .bar {
+    @apply h-2/3;
+    width: 26%;
+    background-image: url(./images/Bg.jpg);
+    background-position: left;
+    background-size: cover;
+  }
+  .year {
+    @apply text-xl font-bold absolute w-max bottom-3 right-1/2 translate-x-1/2;
+  }
+  .growth {
+    @apply text-xl font-bold absolute w-max text-highDark -top-10 right-1/2 translate-x-1/2;
   }
 }
