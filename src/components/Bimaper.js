@@ -2,7 +2,7 @@ import b1 from "../images/bimaper.png";
 
 const Bimaper = () => {
   return (
-    <div className="glass">
+    <>
       <div className="bimaper-box-1">
         <div>
           <h1 className="text-5xl font-light">
@@ -24,7 +24,7 @@ const Bimaper = () => {
           <p className="socials">BIMAPER</p>
         </div> */}
       </div>
-    </div>
+    </>
   );
 };
 

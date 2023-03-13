@@ -21,7 +21,7 @@ const Home = () => {
     };
   };
   return (
-    <div className="home-base">
+    <>
       <div className="flex">
         <div className="flex w-1/2 grow">
           <div className="flex flex-col gap-5 part-box grow">
@@ -131,7 +131,7 @@ const Home = () => {
         </p>
       </div>
       <div className="advert"></div>
-    </div>
+    </>
   );
 };
 
