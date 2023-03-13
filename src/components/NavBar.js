@@ -8,7 +8,7 @@ import n6 from "../images/n6.png";
 import flag from "../images/Flag.png";
 import { useState } from "react";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const data1 = [
     { name: "BIMAPER", ico: logo, cls: "text-4xl" },
     { name: "Our Space", ico: n1, cls: "text-2xl" },
@@ -21,22 +21,20 @@ const NavBar = () => {
     { name: "Our Diary", ico: n6, cls: "text-2xl" },
   ];
   const [expand, setExpand] = useState(false);
-  // const open = () => {
-  //   setExpand(true);
-  // };
-  // const close = () => {
-  //   setExpand(false);
-  // };
+
   const toggle = () => {
     setExpand(!expand);
   };
+
   return (
     <div onClick={toggle} className={`nav-base${expand ? " exp-div" : ""}`}>
       <div className="nav-wrap">
         {data1.map((item) => (
           <div className="nav-box" key={item.name}>
             {expand ? (
-              <h2 className={item.cls + " nav-txt"}>{item.name}</h2>
+              <h2 onClick={props.func} className={item.cls + " nav-txt"}>
+                {item.name}
+              </h2>
             ) : (
               <img className="ico" src={item.ico} alt="Company logo" />
             )}
@@ -47,7 +45,9 @@ const NavBar = () => {
         {data2.map((item) => (
           <div className="nav-box" key={item.name}>
             {expand ? (
-              <h2 className={item.cls + " nav-txt"}>{item.name}</h2>
+              <h2 onClick={props.func} className={item.cls + " nav-txt"}>
+                {item.name}
+              </h2>
             ) : (
               <img className="ico" src={item.ico} alt="Company logo" />
             )}

@@ -95,17 +95,56 @@
   .box-1 {
     @apply bg-highGlow flex grow py-5 justify-evenly items-end;
     height: 24rem;
-    width: 23rem;
+    width: 24rem;
   }
   .box-2 {
     @apply ring-4 ring-inset ring-highGlow flex grow py-5 justify-evenly items-end relative;
     height: 24rem;
-    width: 23rem;
+    width: 24rem;
   }
   .splash-img {
     @apply w-5/6;
   }
   .socials {
     @apply font-normal text-3xl;
+  }
+  .home-base{
+    @apply grow relative;
+    padding-top: 4.1rem;
+    padding-left: 4rem;
+    padding-right: 7.5rem;
+  }
+  .para-box{
+    @apply text-highGlow;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+  }
+  .line{
+    line-height: 1.2;
+  }
+  .para-box-1{
+    @apply flex flex-col;
+    gap: 15px;
+  }
+  .advert{
+    @apply absolute border-4 border-techBlue;
+    top: 4.1rem;
+    width: 15.6rem;
+    height: 53.1rem;
+    right: 5rem;
+    background-image: url(./images/test.jpg);
+  }
+  .bimaper-box-1{
+    @apply text-highGlow flex gap-4 flex-col;
+    padding-top: 3.6rem;
+    padding-left: 8.6rem;
+  }
+  .stat-1{
+    @apply text-xl font-bold absolute w-max;
+    bottom: 60px;
+    right: 51%;
+    transform: translateX(50%);
+    font-size: 6.8rem;
   }
 }
