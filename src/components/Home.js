@@ -1,9 +1,25 @@
 import test from "../images/test.jpg";
 
 const Home = () => {
-  // document.querySelector('.hac').onmouseover = event => {
-  //   event.target.innerText
-  // }
+  const randomiser = (e) => {
+    e.target.onmouseover = (event) => {
+      let iterations = 0;
+      const interval = setInterval(() => {
+        event.target.innerText = event.target.innerText
+          .split("")
+          .map((letter, index) => {
+            if (index < iterations) {
+              return event.target.dataset.value[index];
+            }
+            return Math.floor(Math.random() * 9);
+          })
+          .join("");
+        if (iterations >= event.target.dataset.value.length)
+          clearInterval(interval);
+        iterations += 1;
+      }, 50);
+    };
+  };
   return (
     <div className="home-base">
       <div className="flex">
@@ -12,12 +28,36 @@ const Home = () => {
             <h1>Present</h1>
             <div className="box-1">
               <div className="bar mr-4 relative">
-                <span className="growth">126.8k Cr</span>
-                <span className="year">2022</span>
+                <span
+                  onMouseEnter={randomiser}
+                  data-value="126.8k Cr"
+                  className="growth"
+                >
+                  126.8k Cr
+                </span>
+                <span
+                  onMouseEnter={randomiser}
+                  data-value="2022"
+                  className="year"
+                >
+                  2022
+                </span>
               </div>
               <div className="bar ml-4 relative h-3/4">
-                <span className="growth">146.5k Cr</span>
-                <span className="year">2023</span>
+                <span
+                  onMouseEnter={randomiser}
+                  data-value="146.5k Cr"
+                  className="growth"
+                >
+                  146.5k Cr
+                </span>
+                <span
+                  onMouseEnter={randomiser}
+                  data-value="2023"
+                  className="year"
+                >
+                  2023
+                </span>
                 <span className="bg-techBlue text-highGlow absolute right-1/2 translate-x-1/2 w-full text-center py-1 font-bold">
                   15.5%
                 </span>
@@ -45,13 +85,21 @@ const Home = () => {
           <div className="flex flex-col gap-5 part-box grow">
             <h1>Prediction</h1>
             <div className="box-2">
-              <p data-value="172k Cr" className="hac stat-1 font-light">
+              <p
+                onMouseEnter={randomiser}
+                data-value="172k Cr"
+                className="hac stat-1 font-light"
+              >
                 172k Cr
               </p>
               <span className="text-xl flex justify-center items-center p-10 bg-techBlue text-highGlow font-bold top-4 right-4 absolute">
                 18%
               </span>
-              <span className="text-xl absolute font-bold top-4 left-4">
+              <span
+                onMouseEnter={randomiser}
+                data-value="2028"
+                className="text-xl absolute font-bold top-4 left-4"
+              >
                 2028
               </span>
             </div>
