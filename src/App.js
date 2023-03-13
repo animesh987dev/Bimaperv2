@@ -18,14 +18,14 @@ function App() {
   return (
     <div className="app-base">
       <NavBar func={activePage}></NavBar>
-      {/* {page === "Home" ? (
+      {page === "Home" ? (
         <Home></Home>
       ) : page === "BIMAPER" ? (
         <Bimaper></Bimaper>
       ) : (
         ""
-      )} */}
-      {transition((style, item) =>
+      )}
+      {/* {transition((style, item) =>
         item === "BIMAPER" ? (
           <animated.div className="glass" style={style}>
             <Bimaper></Bimaper>
@@ -42,7 +42,7 @@ function App() {
         ) : (
           ""
         )
-      )}
+      )} */}
     </div>
   );
 }

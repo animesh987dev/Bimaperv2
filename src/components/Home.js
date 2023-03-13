@@ -1,6 +1,9 @@
-import test from "../images/test.jpg";
+import { motion } from "framer-motion";
 
 const Home = () => {
+  const anim = { opacity: 1, x: 0 };
+  const init = { opacity: 0, x: "8rem" };
+
   const randomiser = (e) => {
     e.target.onmouseover = (event) => {
       let iterations = 0;
@@ -21,7 +24,7 @@ const Home = () => {
     };
   };
   return (
-    <>
+    <motion.div animate={anim} initial={init} className="home-base">
       <div className="flex">
         <div className="flex w-1/2 grow">
           <div className="flex flex-col gap-5 part-box grow">
@@ -131,7 +134,7 @@ const Home = () => {
         </p>
       </div>
       <div className="advert"></div>
-    </>
+    </motion.div>
   );
 };
 

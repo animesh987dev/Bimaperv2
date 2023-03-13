@@ -1,8 +1,11 @@
 import b1 from "../images/bimaper.png";
+import { motion } from "framer-motion";
 
 const Bimaper = () => {
+  const anim = { opacity: 1, x: 0 };
+  const init = { opacity: 0, x: "8rem" };
   return (
-    <>
+    <motion.div animate={anim} initial={init} className="glass">
       <div className="bimaper-box-1">
         <div>
           <h1 className="text-5xl font-light">
@@ -24,7 +27,7 @@ const Bimaper = () => {
           <p className="socials">BIMAPER</p>
         </div> */}
       </div>
-    </>
+    </motion.div>
   );
 };
 

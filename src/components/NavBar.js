@@ -7,8 +7,11 @@ import n5 from "../images/n5.png";
 import n6 from "../images/n6.png";
 import flag from "../images/Flag.png";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const NavBar = (props) => {
+  const anim = { opacity: 1, x: 0 };
+  const init = { opacity: 0, x: "8rem" };
   const data1 = [
     { name: "BIMAPER", ico: logo, cls: "text-4xl" },
     { name: "Our Space", ico: n1, cls: "text-2xl" },
@@ -32,9 +35,14 @@ const NavBar = (props) => {
         {data1.map((item) => (
           <div className="nav-box" key={item.name}>
             {expand ? (
-              <h2 onClick={props.func} className={item.cls + " nav-txt"}>
+              <motion.h2
+                animate={anim}
+                initial={init}
+                onClick={props.func}
+                className={item.cls + " nav-txt"}
+              >
                 {item.name}
-              </h2>
+              </motion.h2>
             ) : (
               <img className="ico" src={item.ico} alt="Company logo" />
             )}
@@ -45,9 +53,14 @@ const NavBar = (props) => {
         {data2.map((item) => (
           <div className="nav-box" key={item.name}>
             {expand ? (
-              <h2 onClick={props.func} className={item.cls + " nav-txt"}>
+              <motion.h2
+                animate={anim}
+                initial={init}
+                onClick={props.func}
+                className={item.cls + " nav-txt"}
+              >
                 {item.name}
-              </h2>
+              </motion.h2>
             ) : (
               <img className="ico" src={item.ico} alt="Company logo" />
             )}
