@@ -1,4 +1,4 @@
-import b1 from "../images/bimaper.png";
+import b1 from "../images/Bimaper.svg";
 import { motion } from "framer-motion";
 
 const Bimaper = () => {

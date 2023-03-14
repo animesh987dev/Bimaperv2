@@ -27,6 +27,11 @@ const NavBar = (props) => {
 
   const toggle = () => {
     setExpand(!expand);
+    const interval = setInterval(() => {
+      expand ? props.func[1]("Home") : props.func[1]("BIMAPER");
+      clearInterval(interval);
+    }, 200);
+    // expand ? props.func[1]("Home") : props.func[1]("BIMAPER");
   };
 
   return (
@@ -38,7 +43,8 @@ const NavBar = (props) => {
               <motion.h2
                 animate={anim}
                 initial={init}
-                onClick={props.func}
+                data-value={item.name}
+                onClick={props.func[0]}
                 className={item.cls + " nav-txt"}
               >
                 {item.name}
@@ -56,7 +62,8 @@ const NavBar = (props) => {
               <motion.h2
                 animate={anim}
                 initial={init}
-                onClick={props.func}
+                data-value={item.name}
+                onClick={props.func[0]}
                 className={item.cls + " nav-txt"}
               >
                 {item.name}
