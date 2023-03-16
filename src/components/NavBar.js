@@ -31,7 +31,6 @@ const NavBar = (props) => {
       expand ? props.func[1]("Home") : props.func[1]("BIMAPER");
       clearInterval(interval);
     }, 200);
-    // expand ? props.func[1]("Home") : props.func[1]("BIMAPER");
   };
 
   return (
@@ -43,14 +42,25 @@ const NavBar = (props) => {
               <motion.h2
                 animate={anim}
                 initial={init}
+                transition={{ duration: ".3" }}
                 data-value={item.name}
                 onClick={props.func[0]}
-                className={item.cls + " nav-txt"}
+                className={
+                  item.name === props.func[2]
+                    ? item.cls + " nav-txt active-nav"
+                    : item.cls + " nav-txt"
+                }
               >
                 {item.name}
               </motion.h2>
             ) : (
-              <img className="ico" src={item.ico} alt="Company logo" />
+              <img
+                data-value={item.name}
+                onClick={props.func[0]}
+                className="ico"
+                src={item.ico}
+                alt="Company logo"
+              />
             )}
           </div>
         ))}
@@ -62,14 +72,25 @@ const NavBar = (props) => {
               <motion.h2
                 animate={anim}
                 initial={init}
+                transition={{ duration: ".3" }}
                 data-value={item.name}
                 onClick={props.func[0]}
-                className={item.cls + " nav-txt"}
+                className={
+                  item.name === props.func[2]
+                    ? item.cls + " nav-txt active-nav"
+                    : item.cls + " nav-txt"
+                }
               >
                 {item.name}
               </motion.h2>
             ) : (
-              <img className="ico" src={item.ico} alt="Company logo" />
+              <img
+                data-value={item.name}
+                onClick={props.func[0]}
+                className="ico"
+                src={item.ico}
+                alt="Company logo"
+              />
             )}
           </div>
         ))}

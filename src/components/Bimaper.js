@@ -5,8 +5,18 @@ const Bimaper = () => {
   const anim = { opacity: 1, x: 0 };
   const init = { opacity: 0, x: "8rem" };
   return (
-    <motion.div animate={anim} initial={init} className="glass">
-      <div className="bimaper-box-1">
+    <motion.div
+      transition={{ duration: ".5" }}
+      animate={anim}
+      initial={init}
+      className="glass"
+    >
+      <motion.div
+        transition={{ duration: ".6" }}
+        animate={anim}
+        initial={init}
+        className="bimaper-box-1"
+      >
         <div>
           <h1 className="text-5xl font-light">
             We All Need An Easily Accessible BIMAPER <br /> To Have A Presence
@@ -26,7 +36,7 @@ const Bimaper = () => {
           <p className="socials">BIMAPER</p>
           <p className="socials">BIMAPER</p>
         </div> */}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
